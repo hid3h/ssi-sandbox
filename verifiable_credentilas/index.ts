@@ -45,6 +45,7 @@ const jws = "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..W5S3KEhAW
 const option = {
   algorithms: ["EdDSA"]
 }
+// compactVerify: https://github.com/panva/jose/blob/main/docs/functions/jws_compact_verify.compactVerify.md#readme
 compactVerify(jws, key, option).then((res) => {
   console.log("res", res)
 }).catch((err) => {

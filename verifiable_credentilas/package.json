@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@spruceid/didkit-wasm": "^0.2.1",
+    "bs58": "^5.0.0",
     "didkit-wasm-node": "^0.1.6",
     "dids": "^3.4.0",
     "jose": "^4.11.0"

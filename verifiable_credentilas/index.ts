@@ -42,8 +42,10 @@ const key = createPublicKey({
 })
 
 const jws = "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..W5S3KEhAWDOExWIeZ9LZrmcrEABO5AmmczYZMvgZWAQjL4u_8tPnmNDPsQ-Hw82lfcRviezSUc18tlPM77GpCQ"
-
-compactVerify(jws, key).then((res) => {
+const option = {
+  algorithms: ["EdDSA"]
+}
+compactVerify(jws, key, option).then((res) => {
   console.log("res", res)
 }).catch((err) => {
   console.log("err", err)

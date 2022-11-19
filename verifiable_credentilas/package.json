@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@spruceid/didkit-wasm": "^0.2.1",
-    "didkit-wasm-node": "^0.1.6"
+    "didkit-wasm-node": "^0.1.6",
+    "dids": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "ts-node": "^10.9.1"
   }
 }

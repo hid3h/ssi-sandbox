@@ -49,7 +49,7 @@ issuer, issuanceDateの変数が展開されたjsonファイルが生成され�
 ### 署名
 ```
 vm=$(/./didkit key-to-verification-method key --key-path issuer_key.jwk)
-/./didkit vc-issue-credential --key-path issuer_key.jwk -v "${vm}" -p assertionMethod <unsigned-vc.json > signed-vc.json
+/./didkit vc-issue-credential --key-path issuer_key.jwk -v "${vm}" -p assertionMethod <unsigned-vc-with-status.json > signed-vc-with-status.json
 ```
 署名された`signed-vc.json`が生成される。
 
@@ -59,5 +59,3 @@ vm=$(/./didkit key-to-verification-method key --key-path issuer_key.jwk)
 {"checks":["proof"],"warnings":[],"errors":[]}/myapp #
 ```
 OK
-
-

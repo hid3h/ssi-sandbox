@@ -13,10 +13,10 @@
         "id": "did:example:my-data-subject-identifier"
     },
     "credentialStatus": {
-        "id": "https://example.com/credentials/status/3#94567",
+        "id": "https://7e23-2400-2411-2282-6300-b15a-966a-d8ef-7ef2.jp.ngrok.io/schema.json#9456",
         "type": "StatusList2021Entry",
         "statusPurpose": "revocation",
         "statusListIndex": "9456",
-        "statusListCredential": "https://example.com/credentials/status/3"
+        "statusListCredential": "https://7e23-2400-2411-2282-6300-b15a-966a-d8ef-7ef2.jp.ngrok.io/test.json"
     }
 }

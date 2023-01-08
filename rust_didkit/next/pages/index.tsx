@@ -1,9 +1,10 @@
-// Import the module
-const DIDKit = require('./didkit/lib/web/pkg');
+import { Inter } from '@next/font/google'
+import { issueCredential } from "@pitpa/didkit/didkit-wasm-node"
+import { verifyCredential } from "@pitpa/didkit/didkit-wasm"
 
-console.log(DIDKit.getVersion());
+const inter = Inter({ subsets: ['latin'] })
 
-async function main() {
+export default function Home() {
   const vc = `{
     "@context": [
       "https://www.w3.org/2018/credentials/v1",
@@ -26,20 +27,20 @@ async function main() {
       "jws": "eyJhbGciOiJFZERTQSIsImNyaXQiOlsiYjY0Il0sImI2NCI6ZmFsc2V9..RCftchP9z2iOOHcIzh9dEMUJozPWqoUSxnL2JxOXzQnFmGmFadFc8FSvPBwkgZgrzIhEfArDwB8HBOdrmKvABQ"
     },
     "credentialStatus": {
-      "id": "http://localhost:3000/schema.json#9456",
+      "id": "https://812f-2400-2411-2282-6300-1d3c-e1ba-6510-36d9.jp.ngrok.io/schema.json#9456",
       "type": "StatusList2021Entry",
       "statusPurpose": "revocation",
       "statusListIndex": "9456",
-      "statusListCredential": "http://localhost:3000/test.json"
+      "statusListCredential": "https://812f-2400-2411-2282-6300-1d3c-e1ba-6510-36d9.jp.ngrok.io/test.json"
     }
   }`
   const proofOptions = `{"checks": ["credentialStatus"]}`
-  const result = await verifyCredential(vc, proofOptions)
-  return result;
-}
+  verifyCredential(vc, proofOptions).then((res) => console.log("res", res))
 
-main().then((res) => {
-  console.log("res", res)
-}).catch((err) => {
-  console.log("err", err)
-})
+
+  return (
+    <>
+      とりあえずトップ
+    </>
+  )
+}

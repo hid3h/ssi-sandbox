@@ -15,3 +15,12 @@ cd /myapp/didkit/lib/web
 wasm-pack build
 
 ```
+
+https://www.spruceid.dev/quickstart
+```
+/myapp/didkitで
+
+vm=$(./target/debug/didkit key-to-verification-method key --key-path issuer_key.jwk)
+
+./target/debug/didkit vc-issue-credential --key-path issuer_key.jwk -v “${vm}” -p assertionMethod <unsigned-vc.json
+```

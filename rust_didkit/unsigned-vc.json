@@ -1,0 +1,13 @@
+{
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://localhost:3001/"
+    ],
+    "id": "urn:uuid:hoge",
+    "type": ["VerifiableCredential", "EducationalCredential"],
+    "issuer": "did:key:z6MkkVt3JAcpPDDkJGv7FFArhKNse4tb1SGCNwrn2pqC1kNR",
+    "issuanceDate": "2020-07-20T13:58:53Z",
+    "credentialSubject": {
+      "id": "did:example:my-data-subject-identifier"
+    }
+}

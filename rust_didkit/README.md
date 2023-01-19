@@ -19,10 +19,11 @@ wasm-pack build
 https://www.spruceid.dev/quickstart
 ```
 /myappで
-
 ./didkit/target/debug/didkit generate-ed25519-key > issuer_key.jwk
+issuer_did=$(./didkit/target/debug/didkit key-to-did key -k issuer_key.jwk)
+echo $issuer_did
 
 vm=$(./didkit/target/debug/didkit key-to-verification-method key --key-path issuer_key.jwk)
 
-./didkit/target/debug/didkit vc-issue-credential --key-path issuer_key.jwk -v “${vm}” -p assertionMethod <unsigned-vc.json
+./didkit/target/debug/didkit vc-issue-credential --key-path issuer_key.jwk -v "${vm}" -p assertionMethod <unsigned-vc.json
 ```

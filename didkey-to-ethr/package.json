@@ -1,9 +1,0 @@
-{
-  "name": "didkey-to-ethr",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@noble/ed25519": "^1.7.3"
-  }
-}

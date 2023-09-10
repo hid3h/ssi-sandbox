@@ -1,8 +1,0 @@
-version: '3'
-services:
-  app:
-    image: ghcr.io/spruceid/didkit-cli
-    tty: true
-    entrypoint: sh
-    volumes:
-     - .:/myapp
